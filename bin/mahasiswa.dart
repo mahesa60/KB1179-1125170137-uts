@@ -23,17 +23,13 @@ class Mahasiswa {
 class AsistenDosen extends Mahasiswa {
   String mataKuliah;
   AsistenDosen({
-    required String nama,
-    required String nim,
-    required String jurusan,
-    required int angkatan,
+    required super.nama,
+    required super.nim,
+    required super.jurusan,
+    required super.angkatan,
     required this.mataKuliah,
-  }) : super(
-          nama: nama,
-          nim: nim,
-          jurusan: jurusan,
-          angkatan: angkatan,
-        );
+  });
+  
 // Override method
   @override
   void tampilkanData() {
