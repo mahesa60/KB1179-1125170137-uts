@@ -49,16 +49,12 @@ abstract class Pendaftaran {
 class MahasiswaAktif extends Mahasiswa implements Pendaftaran {
   List<String> matkulDiambil = [];
   MahasiswaAktif({
-    required String nama,
-    required String nim,
-    required String jurusan,
-    required int angkatan,
-  }) : super(
-          nama: nama,
-          nim: nim,
-          jurusan: jurusan,
-          angkatan: angkatan,
-        );
+    required super.nama,
+    required super.nim,
+    required super.jurusan,
+    required super.angkatan,
+  });
+
   @override
   void daftarMatkul(String matkul) {
     matkulDiambil.add(matkul);
